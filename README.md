@@ -104,11 +104,6 @@ Our analysis included comprehensive data visualization examining:
 ![Random Forest Confusion Matrix](assets/images/rf_confusion_matrix.png)
 *Confusion matrix showing classification breakdown with 99.87% overall accuracy*
 
-![Random Forest Feature Importance](assets/images/rf_feature_importance.png)
-*Top 15 features ranked by importance in fraud prediction*
-
-**Analysis:** The visualizations demonstrate that Random Forest effectively handles the class imbalance problem and identifies transaction amount, merchant category, and payment method as the most critical fraud indicators.
-
 ## Technologies Used
 
 - **Python 3.x** - Primary programming language
