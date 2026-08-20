@@ -1,6 +1,6 @@
 # Financial Transaction Fraud Detection
 
-Developed and compared three machine learning models (Logistic Regression, Support Vector Machine, and Random Forest) to detect fraudulent transactions in a highly imbalanced dataset of 13+ million financial transactions, achieving an F1-score of 0.474 and ROC-AUC of 0.919 with Random Forest while addressing critical challenges in real-world fraud detection systems, all within the AI4ALL Ignite accelerator program.
+As part of the AI4ALL Ignite Program, we developed and compared three machine learning models (Logistic Regression, Support Vector Machine, and Random Forest) to detect fraudulent transactions in a highly imbalanced dataset of 13+ million financial transactions, achieving an F1-score of 0.474 and ROC-AUC of 0.919 with Random Forest while addressing critical challenges in real-world fraud detection systems.
 
 ## Problem Statement
 
