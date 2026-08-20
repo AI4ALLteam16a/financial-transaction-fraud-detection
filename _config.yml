@@ -1,0 +1,44 @@
+# Jekyll Configuration for GitHub Pages
+
+# Site settings
+title: Financial Transaction Fraud Detection
+description: >-
+  Machine learning models for detecting fraudulent transactions 
+  in highly imbalanced datasets. Developed by AI4ALL Ignite Group 16A.
+baseurl: "/financial-transaction-fraud-detection"
+url: "https://sweksha-cloud.github.io"
+
+# Author information
+authors:
+  - Tabassum Zahir
+  - Sweksha Shaw
+  - Amir Momoh
+  - Zara Raza
+  - Jennifer Forsyth
+  - Euleena Trinh
+
+# Build settings
+theme: null
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  auto_ids: true
+  
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - data/
+  - "*.ipynb"
+  - generate_visualizations.py
+  - "Group16A - Final Presentation .txt"
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  
+# GitHub Pages settings
+repository: sweksha-cloud/financial-transaction-fraud-detection

@@ -1,0 +1,82 @@
+<!-- Floating Table of Contents with JavaScript -->
+<aside id="toc-sidebar">
+  <h3>Contents</h3>
+  <ul id="toc-list">
+    <li><a href="#problem" data-section="problem">Problem Statement</a></li>
+    <li><a href="#research" data-section="research">Research Questions</a></li>
+    <li><a href="#findings" data-section="findings">Key Findings</a></li>
+    <li><a href="#performance" data-section="performance">Model Performance</a></li>
+    <li><a href="#methodology" data-section="methodology">Methodology</a></li>
+    <li><a href="#dataset" data-section="dataset">Dataset</a></li>
+    <li><a href="#limitations" data-section="limitations">Limitations</a></li>
+    <li><a href="#ethical" data-section="ethical">Ethics</a></li>
+    <li><a href="#team" data-section="team">Team</a></li>
+    <li><a href="#references" data-section="references">References</a></li>
+  </ul>
+</aside>
+
+<script>
+  // Interactive TOC with scroll spy
+  document.addEventListener('DOMContentLoaded', function() {
+    const tocLinks = document.querySelectorAll('#toc-list a');
+    const sections = document.querySelectorAll('main h2[id], main section[id]');
+    
+    // Smooth scroll behavior
+    tocLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          const headerOffset = 80;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Scroll spy - highlight active section
+    function updateActiveLink() {
+      let currentSection = '';
+      const scrollPosition = window.pageYOffset + 150;
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSection = sectionId;
+        }
+      });
+      
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    // Update on scroll with throttle
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateActiveLink();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+    
+    // Initial update
+    updateActiveLink();
+  });
+</script>
