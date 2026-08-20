@@ -17,11 +17,7 @@ Fraudulent transactions are often difficult to distinguish from legitimate ones,
 - **Analyzed 13+ million transactions** from a comprehensive Kaggle financial dataset
 - **Identified critical fraud indicators:**
   - Transactions flagged with errors are ~2.5x more likely to be fraudulent
-<img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/03411b36-90b5-4a61-aa25-e1ab82145fa8" />
-
   - Online transactions carry the highest fraud risk
-<img width="567" height="453" alt="image" src="https://github.com/user-attachments/assets/836ad70b-d889-43fd-a4c3-4d84c60738e1" />
-
   - Higher transaction amounts showed increased fraud rates compared to smaller transactions
 - **Developed and compared three machine learning models:**
   - **Random Forest:** Achieved the best overall performance with 99.87% accuracy, 68% precision, 45% recall, F1-score of 0.474, and ROC-AUC of 0.919
@@ -84,11 +80,29 @@ Use transaction data to identify fraudulent activity, compare various machine le
 ## Key Visualizations and Findings
 
 Our analysis included comprehensive data visualization examining:
-- **Class Imbalance:** Fraud represented only 0.10% of all transactions
+
+### Class Imbalance
+![Class Imbalance](assets/images/class_imbalance.png)
+
+**Finding:** Fraud represented only 0.10% of all transactions, creating extreme class imbalance that challenges traditional machine learning approaches.
+
+### Fraud Risk by Transaction Type
+![Fraud Rate by Entry Method](assets/images/fraud_rate_by_entry_method.png)
+
+**Key Insights:**
 - **Error Flag Analysis:** Transactions with errors showed 2.5x higher fraud likelihood
-- **Transaction Type Risk:** Online transactions demonstrated the highest fraud risk compared to in-person transactions
-- **Confusion Matrices:** Visualized true positives, false positives, true negatives, and false negatives for each model
-- **ROC Curves:** Compared model discrimination abilities across different classification thresholds
+- **Transaction Type Risk:** Online transactions demonstrated the highest fraud risk compared to in-person chip and swipe transactions
+
+### Model Performance Comparison
+![Model ROC Comparison](assets/images/model_comparison_roc.png)
+*ROC curves comparing all three models, with Random Forest achieving the highest AUC of 0.919*
+
+![Model F1 Comparison](assets/images/model_comparison_f1.png)
+*F1-score comparison showing Random Forest's significant advantage on imbalanced data*
+
+### Random Forest - Best Performing Model
+![Random Forest Confusion Matrix](assets/images/rf_confusion_matrix.png)
+*Confusion matrix showing classification breakdown with 99.87% overall accuracy*
 
 ## Technologies Used
 
@@ -200,7 +214,7 @@ financial-transaction-fraud-detection/
 
 ## Acknowledgments
 
-This project was developed as part of the AI4ALL Ignite program, which provides opportunities for students to apply artificial intelligence and machine learning techniques to real-world problems. Thanks to AI4ALL for providing the educational framework and support that made this project possible!
+This project was developed as part of the **AI4ALL Ignite** program, which provides opportunities for students to apply artificial intelligence and machine learning techniques to real-world problems. Special thanks to AI4ALL for providing the educational framework and support that made this project possible.
 
 ---
 
