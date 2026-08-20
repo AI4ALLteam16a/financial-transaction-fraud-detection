@@ -17,7 +17,11 @@ Fraudulent transactions are often difficult to distinguish from legitimate ones,
 - **Analyzed 13+ million transactions** from a comprehensive Kaggle financial dataset
 - **Identified critical fraud indicators:**
   - Transactions flagged with errors are ~2.5x more likely to be fraudulent
+<img width="630" height="470" alt="image" src="https://github.com/user-attachments/assets/03411b36-90b5-4a61-aa25-e1ab82145fa8" />
+
   - Online transactions carry the highest fraud risk
+<img width="567" height="453" alt="image" src="https://github.com/user-attachments/assets/836ad70b-d889-43fd-a4c3-4d84c60738e1" />
+
   - Higher transaction amounts showed increased fraud rates compared to smaller transactions
 - **Developed and compared three machine learning models:**
   - **Random Forest:** Achieved the best overall performance with 99.87% accuracy, 68% precision, 45% recall, F1-score of 0.474, and ROC-AUC of 0.919
