@@ -1,3 +1,11 @@
 data/*.csv
 data/*.json
 .venv/
+
+# streamlit_app/models/*.joblib, models/*.json, and data_samples/*.csv are
+# intentionally NOT ignored — they're committed so the deployed app has
+# something to load without needing the raw (gitignored) Kaggle dataset.
+# Regenerate them locally with streamlit_app/train_models.py if you change
+# streamlit_app/src/features.py or data_loader.py.
+__pycache__/
+*.pyc

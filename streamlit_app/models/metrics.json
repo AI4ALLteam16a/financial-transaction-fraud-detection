@@ -1,0 +1,59 @@
+{
+  "logistic_regression": {
+    "roc_auc": 0.8699177933567017,
+    "at_0.5": {
+      "accuracy": 0.907125,
+      "precision": 0.012016021361815754,
+      "recall": 0.75,
+      "f1": 0.023653088042049936
+    },
+    "at_tuned_threshold": {
+      "threshold": 0.95,
+      "accuracy": 0.9783,
+      "precision": 0.026932084309133488,
+      "recall": 0.38333333333333336,
+      "f1": 0.05032822757111598
+    },
+    "n_test_rows": 40000,
+    "n_test_fraud": 60,
+    "recommended_threshold": 0.95
+  },
+  "random_forest": {
+    "roc_auc": 0.9217609747955267,
+    "at_0.5": {
+      "accuracy": 0.99875,
+      "precision": 0.9166666666666666,
+      "recall": 0.18333333333333332,
+      "f1": 0.3055555555555556
+    },
+    "at_tuned_threshold": {
+      "threshold": 0.25,
+      "accuracy": 0.9989,
+      "precision": 0.75,
+      "recall": 0.4,
+      "f1": 0.5217391304347826
+    },
+    "n_test_rows": 40000,
+    "n_test_fraud": 60,
+    "recommended_threshold": 0.25
+  },
+  "svm": {
+    "roc_auc": 0.8499074074074074,
+    "at_0.5": {
+      "accuracy": 0.8291666666666667,
+      "precision": 0.7111111111111111,
+      "recall": 0.5333333333333333,
+      "f1": 0.6095238095238096
+    },
+    "at_tuned_threshold": {
+      "threshold": 0.39999999999999997,
+      "accuracy": 0.8333333333333334,
+      "precision": 0.6785714285714286,
+      "recall": 0.6333333333333333,
+      "f1": 0.6551724137931034
+    },
+    "n_test_rows": 240,
+    "n_test_fraud": 60,
+    "recommended_threshold": 0.39999999999999997
+  }
+}
